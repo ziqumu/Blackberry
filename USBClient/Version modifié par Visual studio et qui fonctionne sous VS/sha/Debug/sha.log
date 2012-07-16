@@ -1,0 +1,14 @@
+﻿La génération a démarré 16/07/2012 03:04:25.
+     1>Projet "C:\Users\Aurélien\workspace\USBClient\sha\sha.vcxproj" sur le nœud 2 (Rebuild cible(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\sha.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt .\stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\sha.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt .\Sha.cpp
+         Sha.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"C:\Users\Aurélien\workspace\USBClient\Debug\sha.lib" /NOLOGO Debug\Sha.obj
+         Debug\stdafx.obj
+         sha.vcxproj -> C:\Users\Aurélien\workspace\USBClient\Debug\sha.lib
+     1>Génération du projet "C:\Users\Aurélien\workspace\USBClient\sha\sha.vcxproj" terminée (Rebuild cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:00.40

@@ -1,0 +1,806 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 11.00.50522.1 (4787162d).
+//
+// c:\program files (x86)\research in motion\blackberry jde 4.5.0\samples\usbclient - copie\debug\bbdevmgr.tli
+//
+// Wrapper implementations for Win32 type library BBDevMgr.exe
+// compiler-generated file created 07/15/12 at 21:30:10 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IChannelEvents wrapper method implementations
+//
+
+inline HRESULT IChannelEvents::CheckClientStatus ( ) {
+    HRESULT _hr = raw_CheckClientStatus();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannelEvents::OnChallenge ( long attemptsRemaining, unsigned char password[20] ) {
+    HRESULT _hr = raw_OnChallenge(attemptsRemaining, password);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannelEvents::OnNewData ( ) {
+    HRESULT _hr = raw_OnNewData();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannelEvents::OnClose ( ) {
+    HRESULT _hr = raw_OnClose();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IChannel wrapper method implementations
+//
+
+inline void IChannel::GetParams ( ChannelParams * Params ) {
+    HRESULT _hr = get_Params(Params);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IChannel::PuthostBuffers ( unsigned short _arg1 ) {
+    HRESULT _hr = put_hostBuffers(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IChannel::GetPacketsAvailable ( long * PacketsAvailable ) {
+    HRESULT _hr = get_PacketsAvailable(PacketsAvailable);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IChannel::ReadPacket ( unsigned char * data, long length, long * actual ) {
+    HRESULT _hr = raw_ReadPacket(data, length, actual);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::WritePacket ( unsigned char * data, long length ) {
+    HRESULT _hr = raw_WritePacket(data, length);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IDeviceSafe wrapper method implementations
+//
+
+inline IChannelPtr IDeviceSafe::OpenChannelSafe ( LPWSTR channelName, struct IChannelEvents * events, unsigned long timeUnits ) {
+    struct IChannel * _result = 0;
+    HRESULT _hr = raw_OpenChannelSafe(channelName, events, timeUnits, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IChannelPtr(_result, false);
+}
+
+inline HRESULT IDeviceSafe::KillOpenChannelRequest ( ) {
+    HRESULT _hr = raw_KillOpenChannelRequest();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IDeviceProperty wrapper method implementations
+//
+
+inline _bstr_t IDeviceProperty::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _variant_t IDeviceProperty::GetValue ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Value(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface IDeviceProperties wrapper method implementations
+//
+
+inline unsigned long IDeviceProperties::GetCount ( ) {
+    unsigned long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IDevicePropertyPtr IDeviceProperties::GetItem ( const _variant_t & va ) {
+    struct IDeviceProperty * _result = 0;
+    HRESULT _hr = get_Item(va, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDevicePropertyPtr(_result, false);
+}
+
+//
+// interface IDevice wrapper method implementations
+//
+
+inline IDevicePropertiesPtr IDevice::GetProperties ( ) {
+    struct IDeviceProperties * _result = 0;
+    HRESULT _hr = get_Properties(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDevicePropertiesPtr(_result, false);
+}
+
+inline IChannelPtr IDevice::OpenChannel ( LPWSTR channelName, struct IChannelEvents * events ) {
+    struct IChannel * _result = 0;
+    HRESULT _hr = raw_OpenChannel(channelName, events, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IChannelPtr(_result, false);
+}
+
+inline HRESULT IDevice::Reset ( ) {
+    HRESULT _hr = raw_Reset();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IDevice::Equals ( struct IDevice * other ) {
+    long _result = 0;
+    HRESULT _hr = raw_Equals(other, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IDevice_140 wrapper method implementations
+//
+
+inline IChannelPtr IDevice_140::OpenChannelRedirectPwd ( LPWSTR channelName, struct IChannelEvents * events ) {
+    struct IChannel * _result = 0;
+    HRESULT _hr = raw_OpenChannelRedirectPwd(channelName, events, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IChannelPtr(_result, false);
+}
+
+//
+// interface IDeviceManagerEvents wrapper method implementations
+//
+
+inline HRESULT IDeviceManagerEvents::DeviceConnect ( struct IDevice * device ) {
+    HRESULT _hr = raw_DeviceConnect(device);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDeviceManagerEvents::DeviceDisconnect ( struct IDevice * device ) {
+    HRESULT _hr = raw_DeviceDisconnect(device);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IDeviceManagerNotification wrapper method implementations
+//
+
+inline HRESULT IDeviceManagerNotification::SuspendRequest ( ) {
+    HRESULT _hr = raw_SuspendRequest();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDeviceManagerNotification::SuspendNotification ( long suspending ) {
+    HRESULT _hr = raw_SuspendNotification(suspending);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDeviceManagerNotification::ResumeNotification ( ) {
+    HRESULT _hr = raw_ResumeNotification();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IEmulatorEvents wrapper method implementations
+//
+
+inline HRESULT IEmulatorEvents::GetReadData ( unsigned char * pOutBuffer, long bytesToRead, long * pBytesRead ) {
+    HRESULT _hr = raw_GetReadData(pOutBuffer, bytesToRead, pBytesRead);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEmulatorEvents::ReadFromEmulator ( long bytesToRead ) {
+    HRESULT _hr = raw_ReadFromEmulator(bytesToRead);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEmulatorEvents::WriteToEmulator ( unsigned char * pInBuffer, long bytesToWrite, long * pBytesWritten ) {
+    HRESULT _hr = raw_WriteToEmulator(pInBuffer, bytesToWrite, pBytesWritten);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEmulatorEvents::GetEmulatorAddress ( unsigned char * pAddrBuffer, long addrBuffSize, long * pBytesWritten ) {
+    HRESULT _hr = raw_GetEmulatorAddress(pAddrBuffer, addrBuffSize, pBytesWritten);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEmulatorEvents::GetEmulatorPower ( unsigned long * pPowerLevel ) {
+    HRESULT _hr = raw_GetEmulatorPower(pPowerLevel);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEmulatorEvents::CancelIo ( ) {
+    HRESULT _hr = raw_CancelIo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IEmulatorNofitication wrapper method implementations
+//
+
+inline HRESULT IEmulatorNofitication::OnLowBattery ( ) {
+    HRESULT _hr = raw_OnLowBattery();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IChannelEventsEx wrapper method implementations
+//
+
+inline HRESULT IChannelEventsEx::OnChallengeEx ( long maxAttempts, long attemptsRemaining, unsigned char password[20] ) {
+    HRESULT _hr = raw_OnChallengeEx(maxAttempts, attemptsRemaining, password);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannelEventsEx::OnCanSend ( long numPackets ) {
+    HRESULT _hr = raw_OnCanSend(numPackets);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IChannelEventsEx2 wrapper method implementations
+//
+
+inline HRESULT IChannelEventsEx2::OnChallenge2 ( long maxAttempts, long attemptsRemaining, unsigned char password[100] ) {
+    HRESULT _hr = raw_OnChallenge2(maxAttempts, attemptsRemaining, password);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IChannelAuthEvents wrapper method implementations
+//
+
+inline HRESULT IChannelAuthEvents::OnEncryptionChallenge ( long maxAttempts, long attemptsRemaining, unsigned char * encryptedBlob, long encryptedBlobLen, unsigned char * decryptedBlob, long decryptedMaxLen, long * decryptedBlobLen ) {
+    HRESULT _hr = raw_OnEncryptionChallenge(maxAttempts, attemptsRemaining, encryptedBlob, encryptedBlobLen, decryptedBlob, decryptedMaxLen, decryptedBlobLen);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IChannel_300 wrapper method implementations
+//
+
+inline HRESULT IChannel_300::GetWriteQueueInfo ( long * p_lNumQueuedPkts, long * p_lNumQueuedBytes ) {
+    HRESULT _hr = raw_GetWriteQueueInfo(p_lNumQueuedPkts, p_lNumQueuedBytes);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IRimDisk wrapper method implementations
+//
+
+inline _variant_t IRimDisk::GetDeviceSerialNumber ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_DeviceSerialNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t IRimDisk::GetDeviceMountPoint ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_DeviceMountPoint(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT IRimDisk::Eject ( ) {
+    HRESULT _hr = raw_Eject();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IRimDisk::GetIsMounted ( ) {
+    long _result = 0;
+    HRESULT _hr = get_IsMounted(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IRimDisk::GetIsInternal ( ) {
+    long _result = 0;
+    HRESULT _hr = get_IsInternal(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t IRimDisk::GetVolumeName ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_VolumeName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t IRimDisk::GetFormatTypeString ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_FormatTypeString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline unsigned long IRimDisk::GetClusterSize ( ) {
+    unsigned long _result = 0;
+    HRESULT _hr = get_ClusterSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IRimDisks wrapper method implementations
+//
+
+inline unsigned long IRimDisks::GetCount ( ) {
+    unsigned long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IRimDiskPtr IRimDisks::Item ( unsigned long index ) {
+    struct IRimDisk * _result = 0;
+    HRESULT _hr = raw_Item(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRimDiskPtr(_result, false);
+}
+
+//
+// interface IRimDiskEvents wrapper method implementations
+//
+
+inline HRESULT IRimDiskEvents::DiskAppeared ( struct IRimDisk * disk ) {
+    HRESULT _hr = raw_DiskAppeared(disk);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRimDiskEvents::DiskDisappeared ( struct IRimDisk * disk ) {
+    HRESULT _hr = raw_DiskDisappeared(disk);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRimDiskEvents::DiskMounted ( struct IRimDisk * disk ) {
+    HRESULT _hr = raw_DiskMounted(disk);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRimDiskEvents::DiskUnmounted ( struct IRimDisk * disk ) {
+    HRESULT _hr = raw_DiskUnmounted(disk);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IVSPEvents wrapper method implementations
+//
+
+inline HRESULT IVSPEvents::isActive ( long active ) {
+    HRESULT _hr = raw_isActive(active);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPEvents::handlePasswordRequiredEx ( int attemptsRemaining, int totalAttempts, unsigned char passwordStr[20], int * retVal ) {
+    HRESULT _hr = raw_handlePasswordRequiredEx(attemptsRemaining, totalAttempts, passwordStr, retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPEvents::authResult ( long success ) {
+    HRESULT _hr = raw_authResult(success);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPEvents::handlePasswordRequired ( int attemptsRemaining, unsigned char passwordStr[20], int * retVal ) {
+    HRESULT _hr = raw_handlePasswordRequired(attemptsRemaining, passwordStr, retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPEvents::handleLog ( unsigned long logLevel, char * log, int * retVal ) {
+    HRESULT _hr = raw_handleLog(logLevel, log, retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPEvents::serialNotSupported ( ) {
+    HRESULT _hr = raw_serialNotSupported();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPEvents::OnNewData ( long numPackets ) {
+    HRESULT _hr = raw_OnNewData(numPackets);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPEvents::ping ( ) {
+    HRESULT _hr = raw_ping();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IVSPEvents2 wrapper method implementations
+//
+
+inline HRESULT IVSPEvents2::handlePasswordRequiredEx2 ( int attemptsRemaining, int totalAttempts, unsigned char passwordStr[100], int * retVal ) {
+    HRESULT _hr = raw_handlePasswordRequiredEx2(attemptsRemaining, totalAttempts, passwordStr, retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IDevices wrapper method implementations
+//
+
+inline unsigned long IDevices::GetCount ( ) {
+    unsigned long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IDevicePtr IDevices::Item ( unsigned long index ) {
+    struct IDevice * _result = 0;
+    HRESULT _hr = raw_Item(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDevicePtr(_result, false);
+}
+
+//
+// interface IDeviceManager wrapper method implementations
+//
+
+inline IDevicesPtr IDeviceManager::GetDevices ( ) {
+    struct IDevices * _result = 0;
+    HRESULT _hr = get_Devices(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDevicesPtr(_result, false);
+}
+
+inline HRESULT IDeviceManager::Advise ( struct IDeviceManagerEvents * events, unsigned long * cookie ) {
+    HRESULT _hr = raw_Advise(events, cookie);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDeviceManager::Unadvise ( unsigned long cookie ) {
+    HRESULT _hr = raw_Unadvise(cookie);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IDiskManager wrapper method implementations
+//
+
+inline HRESULT IDiskManager::AdviseDiskEvents ( struct IRimDiskEvents * events, unsigned long * cookie ) {
+    HRESULT _hr = raw_AdviseDiskEvents(events, cookie);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDiskManager::UnadviseDiskEvents ( unsigned long cookie ) {
+    HRESULT _hr = raw_UnadviseDiskEvents(cookie);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRimDisksPtr IDiskManager::GetDisks ( ) {
+    struct IRimDisks * _result = 0;
+    HRESULT _hr = get_Disks(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRimDisksPtr(_result, false);
+}
+
+//
+// interface IEmulatorManagerEvents wrapper method implementations
+//
+
+inline HRESULT IEmulatorManagerEvents::HasEmulatorClients ( ) {
+    HRESULT _hr = raw_HasEmulatorClients();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEmulatorManagerEvents::NoEmulatorClients ( ) {
+    HRESULT _hr = raw_NoEmulatorClients();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IEmulator wrapper method implementations
+//
+
+inline HRESULT IEmulator::ConnectEmulator ( struct IEmulatorEvents * events ) {
+    HRESULT _hr = raw_ConnectEmulator(events);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEmulator::DisconnectEmulator ( struct IEmulatorEvents * events ) {
+    HRESULT _hr = raw_DisconnectEmulator(events);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEmulator::WriteDone ( unsigned long bytesCopied ) {
+    HRESULT _hr = raw_WriteDone(bytesCopied);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IEmulator::ReadReady ( ) {
+    HRESULT _hr = raw_ReadReady();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IEmulatorManager wrapper method implementations
+//
+
+inline IEmulatorPtr IEmulatorManager::RegisterEmulator ( struct IEmulatorManagerEvents * events ) {
+    struct IEmulator * _result = 0;
+    HRESULT _hr = raw_RegisterEmulator(events, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IEmulatorPtr(_result, false);
+}
+
+//
+// interface IBbClient wrapper method implementations
+//
+
+inline HRESULT IBbClient::DeviceConnect ( ) {
+    HRESULT _hr = raw_DeviceConnect();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IBbClient::DeviceDisconnect ( ) {
+    HRESULT _hr = raw_DeviceDisconnect();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IBbClient::WriteDone ( unsigned long bytesCopied ) {
+    HRESULT _hr = raw_WriteDone(bytesCopied);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IBbClient::ReadReady ( unsigned char * pInBuffer, long bytesToRead ) {
+    HRESULT _hr = raw_ReadReady(pInBuffer, bytesToRead);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IBbClientManager wrapper method implementations
+//
+
+inline IBbClientPtr IBbClientManager::RegisterBbClient ( ) {
+    struct IBbClient * _result = 0;
+    HRESULT _hr = raw_RegisterBbClient(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBbClientPtr(_result, false);
+}
+
+//
+// interface IVSPMgr wrapper method implementations
+//
+
+inline HRESULT IVSPMgr::Advise ( struct IVSPEvents * events, unsigned long * cookie ) {
+    HRESULT _hr = raw_Advise(events, cookie);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPMgr::VSPInitializeNotify ( int * retVal ) {
+    HRESULT _hr = raw_VSPInitializeNotify(retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPMgr::VSPInitialize ( int * retVal ) {
+    HRESULT _hr = raw_VSPInitialize(retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPMgr::VSPUninitialize ( long force, int * retVal ) {
+    HRESULT _hr = raw_VSPUninitialize(force, retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPMgr::Unadvise ( unsigned long cookie ) {
+    HRESULT _hr = raw_Unadvise(cookie);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPMgr::RDMInitialize ( int * retVal ) {
+    HRESULT _hr = raw_RDMInitialize(retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPMgr::RDMConnect ( struct IDevice * device, int * retVal ) {
+    HRESULT _hr = raw_RDMConnect(device, retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPMgr::RDMDisconnect ( long force, int * retVal ) {
+    HRESULT _hr = raw_RDMDisconnect(force, retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPMgr::RDMQueryComPorts ( unsigned char * buf, unsigned int bufSz, int * retVal ) {
+    HRESULT _hr = raw_RDMQueryComPorts(buf, bufSz, retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPMgr::RDMUninitialize ( int * retVal ) {
+    HRESULT _hr = raw_RDMUninitialize(retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPMgr::WMCStartup ( int * retVal ) {
+    HRESULT _hr = raw_WMCStartup(retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPMgr::WMCShutdown ( int * retVal ) {
+    HRESULT _hr = raw_WMCShutdown(retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IVSPConnection wrapper method implementations
+//
+
+inline HRESULT IVSPConnection::RegisterVSPManager ( struct IVSPMgr * mgr ) {
+    HRESULT _hr = raw_RegisterVSPManager(mgr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPConnection::UninitConn ( unsigned long cookie ) {
+    HRESULT _hr = raw_UninitConn(cookie);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPConnection::ImAlive ( ) {
+    HRESULT _hr = raw_ImAlive();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSPConnection::SetCookie ( unsigned long cookie ) {
+    HRESULT _hr = raw_SetCookie(cookie);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IVSP wrapper method implementations
+//
+
+inline HRESULT IVSP::Initialize ( int * retVal ) {
+    HRESULT _hr = raw_Initialize(retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVSP::Uninitialize ( long force, int * retVal ) {
+    HRESULT _hr = raw_Uninitialize(force, retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IRDM wrapper method implementations
+//
+
+inline HRESULT IRDM::InitializeRDM ( int * retVal ) {
+    HRESULT _hr = raw_InitializeRDM(retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRDM::UninitializeRDM ( int * retVal ) {
+    HRESULT _hr = raw_UninitializeRDM(retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRDM::ConnectRDM ( struct IDevice * device, int * retVal ) {
+    HRESULT _hr = raw_ConnectRDM(device, retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRDM::DisconnectRDM ( long force, int * retVal ) {
+    HRESULT _hr = raw_DisconnectRDM(force, retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRDM::QueryComPortsRDM ( unsigned char * buf, unsigned int bufSz, int * retVal ) {
+    HRESULT _hr = raw_QueryComPortsRDM(buf, bufSz, retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IWMC wrapper method implementations
+//
+
+inline HRESULT IWMC::Startup ( int * retVal ) {
+    HRESULT _hr = raw_Startup(retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWMC::Shutdown ( int * retVal ) {
+    HRESULT _hr = raw_Shutdown(retVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IDcAll wrapper method implementations
+//
+
+inline HRESULT IDcAll::DisconnectAll ( ) {
+    HRESULT _hr = raw_DisconnectAll();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

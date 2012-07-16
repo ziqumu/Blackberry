@@ -1,0 +1,26 @@
+﻿La génération a démarré 16/07/2012 03:04:40.
+     1>Projet "C:\Users\Aurélien\workspace\USBClient\USBClient.vcxproj" sur le nœud 2 (Build cible(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\USBDrivers /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\USBClient.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt .\USBClient.cpp
+         USBClient.cpp
+     1>c:\users\aurélien\workspace\usbclient\usbclient.cpp(101): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\conio.h(131) : voir la déclaration de 'getch'
+     1>c:\users\aurélien\workspace\usbclient\usbclient.cpp(115): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\conio.h(131) : voir la déclaration de 'getch'
+     1>c:\users\aurélien\workspace\usbclient\usbclient.cpp(123): warning C4996: 'putch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putch. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\conio.h(139) : voir la déclaration de 'putch'
+     1>c:\users\aurélien\workspace\usbclient\usbclient.cpp(492): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : voir la déclaration de 'strcpy'
+     1>c:\users\aurélien\workspace\usbclient\usbclient.cpp(512): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>c:\users\aurélien\workspace\usbclient\usbclient.cpp(531): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : voir la déclaration de 'strcpy'
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Aurélien\workspace\USBClient\Debug\USBClient.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Aurélien\workspace\USBClient\Debug\USBClient.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Aurélien\workspace\USBClient\Debug\USBClient.lib" /MACHINE:X86 /SAFESEH Debug\stdafx.obj
+         Debug\USBClient.obj
+         "C:\Users\Aurélien\workspace\USBClient\Debug\sha.lib"
+     1>stdafx.obj : warning LNK4075: ' /EDITANDCONTINUE' ignoré à cause de la spécification '/SAFESEH'
+         USBClient.vcxproj -> C:\Users\Aurélien\workspace\USBClient\Debug\USBClient.exe
+     1>Génération du projet "C:\Users\Aurélien\workspace\USBClient\USBClient.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:02.75

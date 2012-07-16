@@ -1,0 +1,72 @@
+;--------------------------------------------------------------------------
+; RIMPB_RNDIS.INF (XP/2003/Vista/2008/Windows 7)
+;
+; Copyright (c) 2011 Research In Motion Inc. 
+; All rights reserved.
+;
+;--------------------------------------------------------------------------
+
+[Version]
+Signature                = "$Windows NT$"
+Class                    = Net
+ClassGUID                = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider                 = %RIM%
+DriverVer                = 05/05/2011,2.0.0.29
+CatalogFile              = RIMPB_RNDIS.cat
+
+[Manufacturer]
+%RIM%                    = RIMDevices,NT.5.1,ntamd64
+
+[RIMDevices]
+%RIMDevice%              = RNDIS, USB\VID_0fca&PID_8010&MI_00
+%RIMDevice%              = RNDIS, USB\VID_0fca&PID_8012&MI_00
+
+[RIMDevices.NT.5.1]
+%RIMDevice%              = RNDIS.NT.5.1, USB\VID_0fca&PID_8010&MI_00
+%RIMDevice%              = RNDIS.NT.5.1, USB\VID_0fca&PID_8012&MI_00
+
+[RIMDevices.ntamd64]
+%RIMDevice%              = RNDIS.ntamd64, USB\VID_0fca&PID_8010&MI_00
+%RIMDevice%              = RNDIS.ntamd64, USB\VID_0fca&PID_8012&MI_00
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[RNDIS.NT.5.1]
+Characteristics    = 0x84   ; NCF_PHYSICAL + NCF_HAS_UI
+BusType            = 15
+DriverVer          = 05/05/2011,2.0.0.29
+include            = netrndis.inf
+needs              = Usb_Rndis.ndi
+AddReg             = RNDIS_AddReg_XP_And_Up
+
+[RNDIS.ntamd64]
+Characteristics    = 0x84   ; NCF_PHYSICAL + NCF_HAS_UI
+BusType            = 15
+DriverVer          = 05/05/2011,2.0.0.29
+include            = netrndis.inf
+needs              = Usb_Rndis.ndi
+AddReg             = RNDIS_AddReg_XP_And_Up
+
+; no copyfiles - the files are already in place
+
+[RNDIS.NT.5.1.Services]
+include     = netrndis.inf
+needs       = Usb_Rndis.ndi.Services
+
+[RNDIS.ntamd64.Services]
+include     = netrndis.inf
+needs       = Usb_Rndis.ndi.Services
+
+[RNDIS_AddReg_XP_And_Up]   
+HKR, Ndi,                   Service,             0, "USB_RNDISY"
+HKR, Ndi\Interfaces,        UpperRange,          0, "ndis5_ip"
+HKR, Ndi\Interfaces,        LowerRange,          0, "ppip"
+
+;--------------------------------------------------------------------------
+;      S t r i n g s (English only)
+;--------------------------------------------------------------------------
+[Strings]
+RIM                   = "Research In Motion"
+RIMDevice             = "Research In Motion Network Device"
+

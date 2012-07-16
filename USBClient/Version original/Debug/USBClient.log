@@ -1,0 +1,86 @@
+﻿La génération a démarré 15/07/2012 21:30:32.
+     1>Projet "C:\Program Files (x86)\Research In Motion\BlackBerry JDE 4.5.0\samples\usbclient - Copie\USBClient.vcxproj" sur le nœud 2 (Build cible(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\USBClient.exe" /INCREMENTAL /NOLOGO odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:libc.lib /NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:".\Debug\USBClient.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\USBClient.lib" /MACHINE:X86 /SAFESEH .\Debug\StdAfx.obj
+         .\Debug\USBClient.obj
+     1>StdAfx.obj : warning LNK4075: ' /EDITANDCONTINUE' ignoré à cause de la spécification '/SAFESEH'
+     1>USBClient.obj : error LNK2001: symbole externe non résolu __purecall
+     1>USBClient.obj : error LNK2019: symbole externe non résolu "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z) référencé dans la fonction "public: static void * __cdecl _bstr_t::Data_t::operator new(unsigned int)" (??2Data_t@_bstr_t@@SAPAXI@Z)
+     1>comsuppwd.lib(comutil.obj) : error LNK2001: symbole externe non résolu "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z)
+     1>USBClient.obj : error LNK2019: symbole externe non résolu "void __cdecl operator delete(void *)" (??3@YAXPAX@Z) référencé dans la fonction __unwindfunclet$??0_bstr_t@@QAE@PA_W_N@Z$0
+     1>comsuppwd.lib(comutil.obj) : error LNK2001: symbole externe non résolu "void __cdecl operator delete(void *)" (??3@YAXPAX@Z)
+     1>comsuppwd.lib(comraise.obj) : error LNK2001: symbole externe non résolu "void __cdecl operator delete(void *)" (??3@YAXPAX@Z)
+     1>USBClient.obj : error LNK2019: symbole externe non résolu ___report_rangecheckfailure référencé dans la fonction "public: virtual long __stdcall USBClient::raw_OnChallenge(long,unsigned char * const)" (?raw_OnChallenge@USBClient@@UAGJJQAE@Z)
+     1>comsuppwd.lib(comsupp.obj) : error LNK2001: symbole externe non résolu ___report_rangecheckfailure
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu ___report_rangecheckfailure
+     1>USBClient.obj : error LNK2019: symbole externe non résolu _printf référencé dans la fonction "private: char * __thiscall USBClient::ReadVariableProtocol(char const *,char *,int,long &)" (?ReadVariableProtocol@USBClient@@AAEPADPBDPADHAAJ@Z)
+     1>USBClient.obj : error LNK2019: symbole externe non résolu _sprintf_s référencé dans la fonction "public: char const * __thiscall _com_error::ErrorMessage(void)const " (?ErrorMessage@_com_error@@QBEPBDXZ)
+     1>USBClient.obj : error LNK2019: symbole externe non résolu _memcmp référencé dans la fonction _IsEqualGUID
+     1>USBClient.obj : error LNK2019: symbole externe non résolu _memcpy_s référencé dans la fonction "public: __thiscall _variant_t::_variant_t(struct tagVARIANT &,bool)" (??0_variant_t@@QAE@AAUtagVARIANT@@_N@Z)
+     1>USBClient.obj : error LNK2019: symbole externe non résolu _memset référencé dans la fonction "public: int __thiscall USBClient::run(void)" (?run@USBClient@@QAEHXZ)
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu _memset
+     1>USBClient.obj : error LNK2019: symbole externe non résolu _strcpy référencé dans la fonction "public: int __thiscall USBClient::run(void)" (?run@USBClient@@QAEHXZ)
+     1>USBClient.obj : error LNK2019: symbole externe non résolu _strcmp référencé dans la fonction "public: int __thiscall USBClient::run(void)" (?run@USBClient@@QAEHXZ)
+     1>USBClient.obj : error LNK2019: symbole externe non résolu _strlen référencé dans la fonction "private: bool __thiscall USBClient::Send(char *)" (?Send@USBClient@@AAE_NPAD@Z)
+     1>USBClient.obj : error LNK2019: symbole externe non résolu _strncmp référencé dans la fonction "private: char * __thiscall USBClient::ReadVariableProtocol(char const *,char *,int,long &)" (?ReadVariableProtocol@USBClient@@AAEPADPBDPADHAAJ@Z)
+     1>USBClient.obj : error LNK2019: symbole externe non résolu _sha_hash référencé dans la fonction "public: virtual long __stdcall USBClient::raw_OnChallenge(long,unsigned char * const)" (?raw_OnChallenge@USBClient@@UAGJJQAE@Z)
+     1>USBClient.obj : error LNK2019: symbole externe non résolu __wassert référencé dans la fonction "public: class _bstr_t & __thiscall _bstr_t::operator=(wchar_t const *)" (??4_bstr_t@@QAEAAV0@PB_W@Z)
+     1>USBClient.obj : error LNK2019: symbole externe non résolu _getch référencé dans la fonction "public: virtual long __stdcall USBClient::raw_OnChallenge(long,unsigned char * const)" (?raw_OnChallenge@USBClient@@UAGJJQAE@Z)
+     1>OLDNAMES.lib(getch.obj) : error LNK2001: symbole externe non résolu _getch
+     1>USBClient.obj : error LNK2019: symbole externe non résolu _putch référencé dans la fonction "public: virtual long __stdcall USBClient::raw_OnChallenge(long,unsigned char * const)" (?raw_OnChallenge@USBClient@@UAGJJQAE@Z)
+     1>OLDNAMES.lib(putch.obj) : error LNK2001: symbole externe non résolu _putch
+     1>USBClient.obj : error LNK2019: symbole externe non résolu @_RTC_CheckStackVars@8 référencé dans la fonction _main
+     1>comsuppwd.lib(comsupp.obj) : error LNK2001: symbole externe non résolu @_RTC_CheckStackVars@8
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu @_RTC_CheckStackVars@8
+     1>comsuppwd.lib(invkerr.obj) : error LNK2001: symbole externe non résolu @_RTC_CheckStackVars@8
+     1>USBClient.obj : error LNK2019: symbole externe non résolu @__security_check_cookie@4 référencé dans la fonction __unwindfunclet$_main$0
+     1>comsuppwd.lib(comutil.obj) : error LNK2001: symbole externe non résolu @__security_check_cookie@4
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu @__security_check_cookie@4
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu __RTC_CheckEsp
+     1>comsuppwd.lib(invkerr.obj) : error LNK2001: symbole externe non résolu __RTC_CheckEsp
+     1>USBClient.obj : error LNK2019: symbole externe non résolu __RTC_CheckEsp référencé dans la fonction _main
+     1>comsuppwd.lib(comsupp.obj) : error LNK2001: symbole externe non résolu __RTC_CheckEsp
+     1>comsuppwd.lib(comutil.obj) : error LNK2001: symbole externe non résolu __RTC_CheckEsp
+     1>comsuppwd.lib(comraise.obj) : error LNK2001: symbole externe non résolu __RTC_CheckEsp
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu __RTC_InitBase
+     1>comsuppwd.lib(invkerr.obj) : error LNK2001: symbole externe non résolu __RTC_InitBase
+     1>USBClient.obj : error LNK2001: symbole externe non résolu __RTC_InitBase
+     1>comsuppwd.lib(comsupp.obj) : error LNK2001: symbole externe non résolu __RTC_InitBase
+     1>comsuppwd.lib(comutil.obj) : error LNK2001: symbole externe non résolu __RTC_InitBase
+     1>comsuppwd.lib(comraise.obj) : error LNK2001: symbole externe non résolu __RTC_InitBase
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu __RTC_Shutdown
+     1>comsuppwd.lib(invkerr.obj) : error LNK2001: symbole externe non résolu __RTC_Shutdown
+     1>USBClient.obj : error LNK2001: symbole externe non résolu __RTC_Shutdown
+     1>comsuppwd.lib(comsupp.obj) : error LNK2001: symbole externe non résolu __RTC_Shutdown
+     1>comsuppwd.lib(comutil.obj) : error LNK2001: symbole externe non résolu __RTC_Shutdown
+     1>comsuppwd.lib(comraise.obj) : error LNK2001: symbole externe non résolu __RTC_Shutdown
+     1>USBClient.obj : error LNK2019: symbole externe non résolu ___CxxFrameHandler3 référencé dans la fonction __unwindfunclet$_main$0
+     1>comsuppwd.lib(comutil.obj) : error LNK2001: symbole externe non résolu ___CxxFrameHandler3
+     1>USBClient.obj : error LNK2001: symbole externe non résolu "const type_info::`vftable'" (??_7type_info@@6B@)
+     1>comsuppwd.lib(comraise.obj) : error LNK2001: symbole externe non résolu "const type_info::`vftable'" (??_7type_info@@6B@)
+     1>USBClient.obj : error LNK2019: symbole externe non résolu ___security_cookie référencé dans la fonction _main
+     1>comsuppwd.lib(comutil.obj) : error LNK2001: symbole externe non résolu ___security_cookie
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu ___security_cookie
+     1>LINK : error LNK2001: symbole externe non résolu _mainCRTStartup
+     1>OLDNAMES.lib(getch.obj) : error LNK2001: symbole externe non résolu __getch
+     1>OLDNAMES.lib(putch.obj) : error LNK2001: symbole externe non résolu __putch
+     1>comsuppwd.lib(comutil.obj) : error LNK2019: symbole externe non résolu _atexit référencé dans la fonction "void __cdecl `dynamic initializer for 'vtMissing''(void)" (??__EvtMissing@@YAXXZ)
+     1>comsuppwd.lib(comutil.obj) : error LNK2019: symbole externe non résolu _wcslen référencé dans la fonction "char * __stdcall _com_util::ConvertBSTRToString(wchar_t *)" (?ConvertBSTRToString@_com_util@@YGPADPA_W@Z)
+     1>comsuppwd.lib(comutil.obj) : error LNK2019: symbole externe non résolu _free référencé dans la fonction "wchar_t * __stdcall _com_util::ConvertStringToBSTR(char const *)" (?ConvertStringToBSTR@_com_util@@YGPA_WPBD@Z)
+     1>comsuppwd.lib(comutil.obj) : error LNK2019: symbole externe non résolu _malloc référencé dans la fonction "wchar_t * __stdcall _com_util::ConvertStringToBSTR(char const *)" (?ConvertStringToBSTR@_com_util@@YGPA_WPBD@Z)
+     1>comsuppwd.lib(comutil.obj) : error LNK2019: symbole externe non résolu @_RTC_AllocaHelper@12 référencé dans la fonction "wchar_t * __stdcall _com_util::ConvertStringToBSTR(char const *)" (?ConvertStringToBSTR@_com_util@@YGPA_WPBD@Z)
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu @_RTC_AllocaHelper@12
+     1>comsuppwd.lib(comutil.obj) : error LNK2019: symbole externe non résolu @_RTC_CheckStackVars2@12 référencé dans la fonction "wchar_t * __stdcall _com_util::ConvertStringToBSTR(char const *)" (?ConvertStringToBSTR@_com_util@@YGPA_WPBD@Z)
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu @_RTC_CheckStackVars2@12
+     1>comsuppwd.lib(comutil.obj) : error LNK2019: symbole externe non résolu __alloca_probe_16 référencé dans la fonction "wchar_t * __stdcall _com_util::ConvertStringToBSTR(char const *)" (?ConvertStringToBSTR@_com_util@@YGPA_WPBD@Z)
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu __alloca_probe_16
+     1>comsuppwd.lib(comutil.obj) : error LNK2019: symbole externe non résolu __except_handler4 référencé dans la fonction "wchar_t * __stdcall _com_util::ConvertStringToBSTR(char const *)" (?ConvertStringToBSTR@_com_util@@YGPA_WPBD@Z)
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu __except_handler4
+     1>comsuppwd.lib(comraise.obj) : error LNK2019: symbole externe non résolu __CxxThrowException@8 référencé dans la fonction "void __stdcall _com_raise_error(long,struct IErrorInfo *)" (?_com_raise_error@@YGXJPAUIErrorInfo@@@Z)
+     1>comsuppwd.lib(invkprxy.obj) : error LNK2001: symbole externe non résolu __fltused
+     1>LINK : error LNK2001: symbole externe non résolu __load_config_used
+     1>.\Debug\USBClient.exe : fatal error LNK1120: 39 externes non résolus
+     1>Génération du projet "C:\Program Files (x86)\Research In Motion\BlackBerry JDE 4.5.0\samples\usbclient - Copie\USBClient.vcxproj" terminée (Build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:00.22
